@@ -1,4 +1,5 @@
 [![Codecov Coverage](https://img.shields.io/codecov/c/github/chaptone/nestjs-starter/master.svg?style=flat-square)](https://codecov.io/gh/chpatone/nestjs-starter/)
+[![codecov](https://codecov.io/gh/chaptone/nestjs-starter/branch/master/graph/badge.svg)](https://codecov.io/gh/chaptone/nestjs-starter)
 
 ## Installation
 
