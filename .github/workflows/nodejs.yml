@@ -19,7 +19,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install and test
       run: |
-        npm install && codecov --token=${{ secret.CODECOV_TOKEN }}
-        npm test
+        npm install
+        npm test && codecov --token="${{ secret.CODECOV_TOKEN }}"
       env:
         CI: true
