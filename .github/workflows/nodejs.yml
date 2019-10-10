@@ -19,11 +19,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: install and test
       run: |
-        npm install
-        npm test:cov
-    - name: collect badges
-      run: |
-        node badge.js
+        yarn
+        yarn test:cov
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
