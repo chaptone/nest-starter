@@ -19,4 +19,11 @@ describe('CatsController', () => {
       expect(await catsController.findAll()).toHaveLength(0)
     });
   });
+
+  describe('Add 1 cat and get', () => {
+    it('should return a cat', async () => {
+      await catsController.create({ name: 'bobo', age: 1, breed: 'O' } )
+      expect(await catsController.findAll()).toHaveLength(1)
+    });
+  });
 });
