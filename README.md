@@ -1,5 +1,13 @@
-[![Codecov Coverage](https://img.shields.io/codecov/c/github/chaptone/nestjs-starter/master.svg?style=flat-square)](https://codecov.io/gh/chpatone/nestjs-starter/)
-[![codecov](https://codecov.io/gh/chaptone/nestjs-starter/branch/master/graph/badge.svg)](https://codecov.io/gh/chaptone/nestjs-starter)
+## Code coverage
+![](badges/badge-total-statements.svg)
+![](badges/badge-total-branches.svg)
+![](badges/badge-total-functions.svg)
+![](badges/badge-total-lines.svg)
+
+| Package | Statements | Branches | Functions | Lines |
+| ------- | ---------- | -------- | --------- | ----- |
+| ./cats | ![](badges/badge-cat-statements.svg) | ![](badges/badge-cat-branches.svg) | ![](badges/badge-cat-functions.svg) | ![](badges/badge-cat-lines.svg)
+
 
 ## Installation
 
