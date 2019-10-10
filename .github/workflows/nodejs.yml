@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [10.x, 12.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -19,8 +19,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: install and test
       run: |
-        yarn install
-        yarn test:cov
+        npm install
+        npm test:cov
     - name: collect badges
       run: |
         node badge.js
