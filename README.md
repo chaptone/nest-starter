@@ -6,7 +6,7 @@
 
 | Package | Statements | Branches | Functions | Lines |
 | ------- | ---------- | -------- | --------- | ----- |
-| ./cats | ![](badges/badge-cat-statements.svg) | ![](badges/badge-cat-branches.svg) | ![](badges/badge-cat-functions.svg) | ![](badges/badge-cat-lines.svg)
+| /Cats | ![](badges/badge-cat-statements.svg) | ![](badges/badge-cat-branches.svg) | ![](badges/badge-cat-functions.svg) | ![](badges/badge-cat-lines.svg)
 
 
 ## Installation
