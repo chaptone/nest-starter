@@ -3,16 +3,19 @@ import { AppController } from './app.controller'
 import { AppService } from './app.service'
 import { ConfigModule } from '@nestjs/config'
 import configuration from './config'
-import { UserModule } from './user/user.module'
+import { AuthModule } from './auth/auth.module';
+import { UsersService } from './users/users.service';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       load: [configuration],
     }),
-    UserModule,
+    AuthModule,
+    UsersModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, UsersService],
 })
 export class AppModule {}
