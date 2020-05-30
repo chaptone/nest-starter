@@ -10,7 +10,7 @@ export interface User {
 }
 
 @Injectable()
-export class UsersService {
+export class UserService {
     private readonly users: User[];
 
     constructor() {
