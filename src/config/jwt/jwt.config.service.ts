@@ -11,4 +11,8 @@ export class JwtConfigService implements JwtOptionsFactory {
             secret: this.configService.get<string>('jwt.secret')
         };
     }
+
+    get secret(): string {
+      return this.configService.get<string>('jwt.secret');
+    }
 }
