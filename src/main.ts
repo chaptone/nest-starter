@@ -2,10 +2,22 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppConfigService } from './config/app/app.config.service';
+import * as helmet from 'helmet';
+import * as csurf from 'csurf';
+import * as rateLimit from 'express-rate-limit';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const appConfigService : AppConfigService = app.get('AppConfigService');
+  app.use(helmet());
+  app.enableCors();
+  app.use(
+    rateLimit({
+      windowMs: 15 * 60 * 1000, // 15 minutes
+      max: 100, // limit each IP to 100 requests per windowMs
+    }),
+  );
+  // app.use(csurf());
 
   const options = new DocumentBuilder()
     .setTitle('Contract List App')
