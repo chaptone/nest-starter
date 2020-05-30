@@ -21,7 +21,7 @@ export class UsersService {
                 password: 'javis',
                 firstName: 'Robert',
                 lastName: 'Downey jr.',
-                hobby: 'Being Iron Man!'
+                hobby: 'Being Iron Man!',
             },
             {
                 id: 2,

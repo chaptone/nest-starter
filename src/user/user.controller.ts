@@ -1,10 +1,12 @@
-import { Controller, Get } from "@nestjs/common";
-import { UsersService, User } from "./users.service";
+import { Controller, Get, UseGuards } from "@nestjs/common";
+import { UsersService, User } from "./user.service";
+import { JwtAuthGuard } from "src/auth/guards/jwt-auth.guard";
 
 @Controller('users')
 export class UserController {
     constructor(private userService: UsersService) {}
 
+    @UseGuards(JwtAuthGuard)
     @Get()
     async getUserInformation(): Promise<User[]> {
         return this.userService.find()
