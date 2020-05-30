@@ -1,17 +1,15 @@
 import { Module } from '@nestjs/common'
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
-import { ConfigModule } from '@nestjs/config'
-import configuration from './config'
+import { AppConfigModule } from './config/app/app.config.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersService } from './users/users.service';
 import { UsersModule } from './users/users.module';
+import { JwtConfigModule } from './config/jwt/jwt.config.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
-      load: [configuration],
-    }),
+    AppConfigModule,
     AuthModule,
     UsersModule,
   ],
