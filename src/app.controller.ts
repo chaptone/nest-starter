@@ -7,6 +7,7 @@ import { LocalAuthGuard } from './auth/guards/local-auth.guard';
 export class AppController {
   constructor(private authService: AuthService) {}
 
+  @Get()
   getHello(){
     return 'Hello World!'
   }
