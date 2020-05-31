@@ -5,10 +5,12 @@ import { AppConfigService } from './config/app/app.config.service';
 import * as helmet from 'helmet';
 import * as csurf from 'csurf';
 import * as rateLimit from 'express-rate-limit';
+import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const appConfigService : AppConfigService = app.get('AppConfigService');
+  app.useGlobalPipes(new ValidationPipe({ transform: true, whitelist: true }));
   app.use(helmet());
   app.enableCors();
   app.use(

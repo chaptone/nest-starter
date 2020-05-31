@@ -6,4 +6,5 @@ export default registerAs('app', () => ({
   url: process.env.APP_URL,
   port: process.env.APP_PORT,
   secret: process.env.APP_SECRET,
+  sendGridMailApi: process.env.MAIL_SENDGRID_API_KEY,
 }));

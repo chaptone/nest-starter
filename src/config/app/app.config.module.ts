@@ -15,7 +15,9 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
           .default('development'),
         APP_URL: Joi.string().default('http://localhost:8080'),
         APP_PORT: Joi.number().default(8080),
+        MAIL_SENDGRID_API_KEY: Joi.string(),
       }),
+      isGlobal: true
     }),
   ],
   providers: [ConfigService, AppConfigService],
